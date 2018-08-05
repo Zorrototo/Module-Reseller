@@ -12,23 +12,8 @@ table.center{
 	margin-top:-6px;
 	padding-top:10px;
 	text-align: center;
-	color:#FFFF;
 }
 
-table.center tr td{
-	border:1px solid #cfcfcf;
-	background:#e5e5e5;
-}
-
-table.center th{
-	border:1px solid #cfcfcf;
-	background:#c5c5c5;
-}
-
-table.center tr.first_row td{
-	border:1px solid #cfcfcf;
-	background:#c5c5c5;
-}
 </style>
 <?php
 /*

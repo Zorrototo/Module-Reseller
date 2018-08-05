@@ -50,12 +50,12 @@ function exec_ogp_module()
 			  <tr>
 				<td height="23" colspan="5">&nbsp;</td>
 			  </tr>
-			  <tr>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC" height="23" ><div align=center><strong><?php print_lang("service");?></strong></div></td>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align=center><strong><?php print_lang("invoice_duration");?></strong></div></td>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align=center><strong><?php print_lang("service_price");?></strong></div></td>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align=center><strong><?php print_lang("discount");?></strong></div></td>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align=center><strong><?php print_lang("account_price");?></strong></div></td>
+			  <tr align="center">
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC" height="23" ><strong><?php print_lang("service_name");?></strong></td>
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><strong><?php print_lang("invoice_duration");?></strong></td>
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><strong><?php print_lang("service_price");?></strong></td>
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><strong><?php print_lang("discount");?></strong></td>
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><strong><?php print_lang("account_price");?></strong></td>
 			  </tr>
 			<?php
 			$subtotal = 0;
@@ -93,12 +93,12 @@ function exec_ogp_module()
 				}
 
 				?>			  
-				  <tr>
+				  <tr align="center">
 					<td height="23"><?php  echo $service_name; ?></td>
 					<td><?php  echo $qty." ".get_lang($invoice_duration."s"); ?></td>
-					<td><?php  echo $price_slot.$currency." / ".get_lang($invoice_duration)." (&nbsp;".$qty*$price_slot.$currency."&nbsp;)"; ?></td>
+					<td><?php  echo $price_slot." ".$currency." / ".get_lang($invoice_duration)." (&nbsp;".$qty*$price_slot."&nbsp;".$currency."&nbsp;)"; ?></td>
 					<td><?php  echo $discount; ?>%</td>
-					<td><?php  echo $price.$currency; ?></td>
+					<td><?php  echo $price." ".$currency; ?></td>
 				  </tr><?php
 			}
 			
@@ -108,25 +108,25 @@ function exec_ogp_module()
 			  <tr>
 				<td height="24" colspan="5">&nbsp;</td>
 			  </tr>
-			  <tr>
+			  <tr align="center">
 				<td colspan="3" rowspan="4">&nbsp;</td>
-				<td height="23" style="border: 2px solid #000000"><div align="right"><strong><?php print_lang("subtotal");?> : </strong></div></td>
-				<td style="border: 2px solid #000000"><?php  echo $subtotal.$currency; ?></td>
+				<td height="23" style="border: 2px solid #000000" align="right"><strong><?php print_lang("subtotal");?> : </strong></td>
+				<td style="border: 2px solid #000000"><?php  echo $subtotal." ".$currency; ?></td>
 			  </tr>
-			  <tr>
-				<td height="23" style="border: 2px solid #000000"><div align="right"><strong><?php print_lang("tax");?> : </strong></div></td>
+			  <tr align="center">
+				<td height="23" style="border: 2px solid #000000" align="right"><strong><?php print_lang("tax");?> : </strong></td>
 				<td style="border: 2px solid #000000"><?php  echo $cart[0]['tax_amount']."%"; ?></td>
 			  </tr>
-			  <tr>
-				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align="right"><strong><?php print_lang("total");?> : </strong></div></td>
-				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><?php  echo $total.$currency; ?></td>
+			  <tr align="center">
+				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC" align="right"><strong><?php print_lang("total");?> : </strong></td>
+				<td style="border: 2px solid #000000" bgcolor="#CCCCCC"><?php  echo $total." ".$currency; ?></td>
 			  </tr>
-			  <tr>
-				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align="right"><strong><?php print_lang("cart_id");?> : </strong></div></td>
+			  <tr align="center">
+				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC" align="right"><strong><?php print_lang("cart_id");?> : </strong></td>
 				<td style="border: 2px solid #000000" ><?php  echo $cart_id; ?></td>
 			  </tr>
-			  <tr>
-				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC"><div align="right"><strong><?php print_lang("payment_date");?> : </strong></div></td>
+			  <tr align="center">
+				<td height="23" style="border: 2px solid #000000" bgcolor="#CCCCCC" align="right"><strong><?php print_lang("payment_date");?> : </strong></td>
 				<td style="border: 2px solid #000000"><?php  echo $account['payment_date']; ?></td>
 			  </tr>
 			  <tr>

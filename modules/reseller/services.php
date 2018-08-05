@@ -12,23 +12,8 @@ table.center{
 	margin-top:-6px;
 	padding-top:10px;
 	text-align: center;
-	color:#FFFF;
 }
 
-table.center tr td{
-	border:1px solid #cfcfcf;
-	background:#e5e5e5;
-}
-
-table.center th{
-	border:1px solid #cfcfcf;
-	background:#c5c5c5;
-}
-
-table.center tr.first_row td{
-	border:1px solid #cfcfcf;
-	background:#c5c5c5;
-}
 </style>
 <?php
 /*
@@ -140,7 +125,7 @@ function exec_ogp_module()
 	{
 		//Sanitize the POST values
 		$service_id = clean($_POST['service_id']);
-		echo $service_id;
+		//echo $service_id;
 		$percentage = clean($_POST['percentage']);
 		$description = clean($_POST['description']);
 		$code = clean($_POST['code']);
